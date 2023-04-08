@@ -1,0 +1,187 @@
+{
+	"info": {
+		"_postman_id": "19b4b3b1-915a-4c4d-9ec4-86df9710d847",
+		"name": "Flowers project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20804713"
+	},
+	"item": [
+		{
+			"name": "Create flower",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n        \"name\": \"Rosa\",\n        \"price\": 4\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7771/flower/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7771",
+					"path": [
+						"flower",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all flowers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7771/flower/getAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7771",
+					"path": [
+						"flower",
+						"getAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete flower by Id",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7771/flower/delete/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7771",
+					"path": [
+						"flower",
+						"delete",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create batch",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"name\": \"Diego de noche\",\n        \"price\": 11.0\n    },\n    {\n        \"name\": \"Camomila\",\n        \"price\": 112.0\n    }\n]"
+				},
+				"url": {
+					"raw": "http://localhost:7771/flower/flores-batch",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7771",
+					"path": [
+						"flower",
+						"flores-batch"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get flower by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7771/flower/getById/642dec4d3cff0468d1ccb914",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7771",
+					"path": [
+						"flower",
+						"getById",
+						"642dec4d3cff0468d1ccb914"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get flowers price more than",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7771/flower/getFlowersPriceMoreThan/130",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7771",
+					"path": [
+						"flower",
+						"getFlowersPriceMoreThan",
+						"130"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get flowers by name ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7771/flower/getByName/Rosa",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7771",
+					"path": [
+						"flower",
+						"getByName",
+						"Rosa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get Ordered Flowers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7771/flower/getOrderedFlowers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7771",
+					"path": [
+						"flower",
+						"getOrderedFlowers"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
