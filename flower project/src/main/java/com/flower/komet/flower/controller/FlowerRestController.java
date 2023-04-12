@@ -14,9 +14,9 @@ import java.util.List;
 import java.util.Optional;
 
 
-@RestController
-@RequestMapping("/flower")
 @Slf4j
+@RestController
+@RequestMapping("/api/v1/flowers")
 public class FlowerRestController {
 
     @Autowired
@@ -81,5 +81,4 @@ public class FlowerRestController {
         log.info("Requesting all flowers ordered by name");
         return flowerRepository.orderFlowersByABC(Sort.by(Sort.Direction.ASC,"name"));
     }
-
 }
