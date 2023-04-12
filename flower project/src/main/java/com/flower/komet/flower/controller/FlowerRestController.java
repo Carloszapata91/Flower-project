@@ -25,7 +25,6 @@ public class FlowerRestController {
     @PostMapping("/create")
     @ResponseStatus(HttpStatus.CREATED)
     public ResponseEntity<?> post(@RequestBody FlowerEntity input){
-
         FlowerEntity save = flowerRepository.save(input);
         log.info("Creando una flor: {}",save.getName());
         return ResponseEntity.ok(save);
@@ -34,8 +33,7 @@ public class FlowerRestController {
     @GetMapping("/getAll")
     @ResponseStatus(HttpStatus.OK)
     public List<FlowerEntity> findAllFlowers(){
-        log.info("requesting all flores ");
-
+        log.info("Requesting all flores ");
         return flowerRepository.findAll();
     }
 
@@ -50,7 +48,6 @@ public class FlowerRestController {
     @ResponseStatus(HttpStatus.OK)
     public Optional<FlowerEntity> findFlowers(@PathVariable String id){
         log.info("Retornando flor por ID");
-
         return flowerRepository.findById(id);
     }
 
@@ -64,9 +61,10 @@ public class FlowerRestController {
     }
 
     @GetMapping("/getByName/{nombre}")
+    //@RequestMapping(value="/getByName/{nombre}", method=RequestMethod.GET)
     @ResponseStatus(HttpStatus.OK)
     public List<FlowerEntity> findAllFlowersByName(@PathVariable String nombre){
-        log.info("Requesting all flowers by name");
+        log.info("Requesting flowers by name");
         return flowerRepository.findAllByName(nombre);
     }
 
